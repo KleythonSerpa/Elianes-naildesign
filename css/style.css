@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --bg-fundo: #ffdee5 ;
+    --font: #4A0100;
+    --font-header:  #ab6a7c;
+    --bg-agenda: #8f5062;
+    --color-universal: #fff;
+
+}
+
+body{
+    background-color: var(--bg-fundo);
+    color:var(--font);
+    min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+}
+.cabeca{
+    background-color: #ffced8;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+/*  INICIO DO HEADER */
+.container{
+   width: 100%;
+   max-width:  1200px;
+   margin: 0 auto;
+   padding: 0 20px;
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.logo{
+    width: auto;
+    height: 60px;
+    max-width: 60px;
+    object-fit: contain;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+/* LINHA DO LINK NO HEAER */
+.menu-item{
+    position: relative;
+    padding: 5px 0;
+}
+.menu-item a{
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 10px;
+    color:var(--font-header);
+}
+.menu-item a::after{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--font);
+    transition: width 0.3s ease ;
+}
+.menu-item a:hover::after{
+    width: 100%;
+}
+/* FINAL DA LINHA DEBAICO DO LINK*/
+
+.btn-link{
+    display: flex;
+}
+.btn-agenda{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--font-header);
+    padding: 8px 16px;
+    border: 1px solid var(--font-header);
+    border-radius: 5px  ;
+    transition: all 0.3s ease;
+
+}
+.btn-agenda:hover{
+    background-color: var(--bg-agenda);
+    border-color: var(--bg-agenda);
+    color: var(--bg-fundo);
+    transform: scale(1.05);
+}
+
+/* FINAL DO HEADER */
+
+/* section inicio*/
+.hero{
+   min-height: 70vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 80px 0;
+}
+.hero .container{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+.hero-content{
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-content h1{
+    font-size: 51px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+.hero-content p{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.btn-hero{
+    text-decoration: none;
+    color:var(--color-universal);
+    background-color: var(--bg-agenda);
+    padding: 16px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(143, 80, 98, 0.3);
+    transition: all 0.3s ease;
+}
+.btn-hero:hover{
+    background-color: var(--font);
+    transform:translateY(-3px);
+    box-shadow: 0 6px 20px rgba(74, 1, 0, 0.2);
+    color: var(--bg-fundo);
+}
+/* final da section hero - com direito a mudança no botão*/
+
+/*section  quem sou*/
